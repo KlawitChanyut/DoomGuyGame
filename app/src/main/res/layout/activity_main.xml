@@ -7,13 +7,16 @@
     tools:context=".MainActivity">
 
     <androidx.gridlayout.widget.GridLayout
-        android:layout_width="409dp"
-        android:layout_height="460dp"
+        android:id="@+id/gridLayout"
+        android:layout_width="410dp"
+        android:layout_height="389dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="135dp">
+        app:layout_constraintTop_toBottomOf="@+id/Time">
 
         <ImageView
             android:id="@+id/doom1"
@@ -38,6 +41,7 @@
             app:layout_column="2"
             app:layout_row="0"
             app:srcCompat="@drawable/doomguy" />
+
         <ImageView
             android:id="@+id/doom4"
             android:layout_width="140dp"
@@ -61,6 +65,7 @@
             app:layout_column="2"
             app:layout_row="1"
             app:srcCompat="@drawable/doomguy" />
+
         <ImageView
             android:id="@+id/doom7"
             android:layout_width="140dp"
@@ -85,4 +90,34 @@
             app:layout_row="2"
             app:srcCompat="@drawable/doomguy" />
     </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:layout_marginBottom="41dp"
+        android:gravity="center"
+        android:text="@string/time"
+        android:textAlignment="center"
+        android:textColor="#009688"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="74dp"
+        android:gravity="center"
+        android:text="@string/score"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
